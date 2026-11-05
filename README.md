@@ -22,5 +22,8 @@ Screenshot taken on September 16th, Early Autumn in-game:
 - Java 25 with the included Gradle wrapper and Fabric Loom. Set IntelliJ’s Gradle JVM to Java 25.
 - Versions live in `gradle.properties`. Run `bash ./gradlew build`.
 
+## Credits
+- [Original mod](https://github.com/cintreck/real-serene-seasons) made by cintreck
+
 ## License
 - CC0-1.0. Use it freely.

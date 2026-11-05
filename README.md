@@ -25,5 +25,8 @@ Screenshot taken on September 16th, Early Autumn in-game:
 ## Credits
 - [Original mod](https://github.com/cintreck/real-serene-seasons) made by cintreck
 
+## Generative AI Disclaimer
+- This Fabric 26.X port was updated with the assistance of Generative AI
+
 ## License
 - CC0-1.0. Use it freely.

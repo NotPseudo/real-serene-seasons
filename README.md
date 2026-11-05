@@ -13,13 +13,14 @@ Screenshot taken on September 16th, Early Autumn in-game:
 - Works with Serene Seasons' dimension whitelist and networking so connected players always see the calendar-aligned season state.
 
 ## Install
+- Minecraft 26.3 and Java 25 or newer. Earlier Minecraft versions require an older release of this mod.
 - Requires [Fabric](https://fabricmc.net/), [Fabric API](https://modrinth.com/mod/fabric-api), and [Serene Seasons](https://modrinth.com/mod/serene-seasons).
 - Optional UI: add [Mod Menu](https://modrinth.com/mod/modmenu) and [Cloth Config](https://modrinth.com/mod/cloth-config) to tweak the hemisphere toggle in-game.
 - Place the built jar on both the server and clients so everyone receives calendar-driven seasons.
 
 ## Build
-- Java 21 with Gradle + Fabric Loom.
-- Versions live in `gradle.properties`. Run `./gradlew build`.
+- Java 25 with the included Gradle wrapper and Fabric Loom. Set IntelliJ’s Gradle JVM to Java 25.
+- Versions live in `gradle.properties`. Run `bash ./gradlew build`.
 
 ## License
 - CC0-1.0. Use it freely.

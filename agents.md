@@ -1,5 +1,5 @@
 Environment:
-Minecraft Mod (Fabric 1.21.8)
+Minecraft Mod (Fabric 26.3, Java 25)
 
 Strict Rules:
 - ALWAYS use perfectly crystal clear simple symmetrical names for entities that immediately convey their purpose, environment, and usage (e.g. auth-browser.ts / auth-server.ts, createBrowserClient / createServerClient)

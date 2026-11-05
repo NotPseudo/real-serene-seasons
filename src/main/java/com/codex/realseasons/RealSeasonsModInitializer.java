@@ -36,8 +36,8 @@ public final class RealSeasonsModInitializer implements ModInitializer {
         // Register S2C payload codec on the server only. The client registers in its own initializer.
         EnvType envType = FabricLoader.getInstance().getEnvironmentType();
         if (envType == EnvType.SERVER) {
-            PayloadTypeRegistry.playS2C().register(RealSeasonsPackets.DisplayDaysPayload.TYPE, RealSeasonsPackets.DisplayDaysPayload.STREAM_CODEC);
-            PayloadTypeRegistry.playS2C().register(RealSeasonsPackets.SeasonStatePayload.TYPE, RealSeasonsPackets.SeasonStatePayload.STREAM_CODEC);
+            PayloadTypeRegistry.clientboundPlay().register(RealSeasonsPackets.DisplayDaysPayload.TYPE, RealSeasonsPackets.DisplayDaysPayload.STREAM_CODEC);
+            PayloadTypeRegistry.clientboundPlay().register(RealSeasonsPackets.SeasonStatePayload.TYPE, RealSeasonsPackets.SeasonStatePayload.STREAM_CODEC);
         }
 
         SeasonHelper.ISeasonDataProvider originalProvider = SeasonHelper.dataProvider;

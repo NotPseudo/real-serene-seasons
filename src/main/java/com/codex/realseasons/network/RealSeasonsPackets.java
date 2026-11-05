@@ -4,11 +4,11 @@ import com.codex.realseasons.RealSeasonsSharedData;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public final class RealSeasonsPackets {
-    public static final ResourceLocation ID_DISPLAY_DAYS = ResourceLocation.fromNamespaceAndPath(RealSeasonsSharedData.MOD_ID, "display_days");
-    public static final ResourceLocation ID_SEASON_STATE = ResourceLocation.fromNamespaceAndPath(RealSeasonsSharedData.MOD_ID, "season_state");
+    public static final Identifier ID_DISPLAY_DAYS = Identifier.fromNamespaceAndPath(RealSeasonsSharedData.MOD_ID, "display_days");
+    public static final Identifier ID_SEASON_STATE = Identifier.fromNamespaceAndPath(RealSeasonsSharedData.MOD_ID, "season_state");
 
     public record DisplayDaysPayload(int days) implements CustomPacketPayload {
         public static final Type<DisplayDaysPayload> TYPE = new Type<>(ID_DISPLAY_DAYS);

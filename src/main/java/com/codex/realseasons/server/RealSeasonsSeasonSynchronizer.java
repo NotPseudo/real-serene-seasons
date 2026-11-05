@@ -10,7 +10,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.Level;
 import sereneseasons.api.SSGameRules;
 import sereneseasons.init.ModConfig;
@@ -99,10 +99,10 @@ public final class RealSeasonsSeasonSynchronizer {
             return;
         }
 
-        GameRules.BooleanValue rule = level.getGameRules().getRule(SSGameRules.RULE_DOSEASONCYCLE);
-        if (rule != null && rule.get()) {
-            rule.set(false, level.getServer());
-            RealSeasonsSharedData.LOGGER.info("Disabled doSeasonCycle game rule in {} to allow real-time season syncing.", level.dimension().location());
+        GameRules rules = level.getGameRules();
+        if (rules.get(SSGameRules.RULE_DOSEASONCYCLE)) {
+            rules.set(SSGameRules.RULE_DOSEASONCYCLE, false, level.getServer());
+            RealSeasonsSharedData.LOGGER.info("Disabled doSeasonCycle game rule in {} to allow real-time season syncing.", level.dimension().identifier());
         }
         disabledCycleRule.add(level.dimension());
     }
